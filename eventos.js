@@ -1,8 +1,14 @@
 
-element = document.getElementById("btn")
+document.addEventListener('DOMContentLoaded', (event) => {
+    const boton = document.getElementById('button');
+    const div = document.getElementById('div');
 
-element.addEventListener("click", saludarDiv);
+    boton.addEventListener('click', (event) => {
+        alert('Hola!');
+        event.stopPropagation();
+    });
 
-function saludarDiv() {
-  alert("Hola! Soy el div");
-}
+    div.addEventListener('click', () => {
+        alert('Hola! Soy el div');
+    });
+});
